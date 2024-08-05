@@ -285,16 +285,24 @@ form{
 }
 
 form input{
-    height: 2.5rem;
+    padding-left: 0.5rem;
+    height: 2.3rem;
     width:100%;
     
     border: none;
     border-radius: 3px;
 }
 
+#error-input{
+    color: rgb(211, 24, 24);
+    font-size: 11px;
+    margin-top: 0.5rem;
+}
+
 form button{
+    cursor: pointer;
     width:150px;
-    padding:0.6rem 2rem;
+    padding:0.6rem 0;
     color:white;
     font-weight: 600;
 
@@ -308,6 +316,26 @@ form button{
 @media (min-width:50em){
     footer{
         grid-template-columns: 1fr 1fr;
-        column-gap: 20rem;
+        column-gap: 18rem;
+        grid-template-areas: 
+            'logo newsletter';
+    }
+
+    .newsletter-container{
+        grid-area: newsletter;
+    }
+
+    form{
+        flex-direction: row;
+        gap:2rem;
+    }
+
+    form button{
+        max-width: 7rem;
+        align-self: first baseline;
+    }
+
+    form input{
+        width:15rem;
     }
 }
